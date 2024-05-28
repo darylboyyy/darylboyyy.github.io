@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #ffffff;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 2.5em;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+h2 {
+    margin-top: 40px;
+    font-size: 2em;
+    color: #f0db4f;
+}
+
+.skill {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #333333;
+    border-radius: 10px;
+}
+
+a {
+    color: #f0db4f;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.certifications {
+    margin-top: 40px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.slides {
+    display: flex;
+    overflow: hidden;
+    width: 500%;
+}
+
+.slide {
+    width: 20%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.navigation label {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+input[name="slider"] {
+    display: none;
+}
+
+input[name="slider"]:checked ~ .slides {
+    transform: translateX(calc(-100% * (var(--n) - 1) / 5));
+    transition: transform 0.5s ease-in-out;
+}
+
+#slide1:checked ~ .slides {
+    --n: 1;
+}
+
+#slide2:checked ~ .slides {
+    --n: 2;
+}
+
+#slide3:checked ~ .slides {
+    --n: 3;
+}
+
+#slide4:checked ~ .slides {
+    --n: 4;
+}
+
+#slide5:checked ~ .slides {
+    --n: 5;
+}
+
+input[name="slider"]:checked + label {
+    background: #f0db4f;
+}
